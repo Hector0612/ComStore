@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado MECANICO ANTRYX MK860L</title>
+    <link rel="stylesheet" href="venta.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="logo">
+                    <img src="computer.jpg" alt="Logo Tienda de Accesorios" class="logo-img">
+                </a>
+                <ul class="nav-links">
+                    <li><button onclick="location.href='index.html'" class="catalog-button">Catálogo</button></li>
+                    <li><button onclick="location.href='accesorio.html'" class="accesorio-button">Accesorios</button></li>
+                    <li><button onclick="location.href='index.html#contacto-footer'" class="contact-button">Contáctanos</button></li>
+                    <li><button onclick="location.href='carrito.html'" class="cart-button">Carrito</button></li>
+                </ul>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <script>
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Efecto de contracción de la barra de navegación al desplazarse
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shrink');
+                } else {
+                    navbar.classList.remove('shrink');
+                }
+            });
+
+            // Toggle del menú para pantallas pequeñas
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        </script>
+    </header>
+    <br>
+    <br>
+
+    <section class="product-container">
+        <div class="product-image">
+            <img src="https://mipclista.com/7413-large_default/kit-teclado-mouse-gamer-msi-vigor-gk30-rgb-.jpg" alt="Teclado MECANICO ANTRYX MK860L">
+        </div>
+        <div class="product-details">
+            <div class="promo">
+                <span class="discount">15% dto. Oferta online</span>
+            </div>
+            <h1>Teclado MECANICO ANTRYX MK860L</h1>
+
+            <h3>¿Lo quieres?</h3>
+            <div class="buy-options">   
+                <marquee direction="right"><label for="buy-modal" class="buy-now">Comprar</label></marquee>
+            </div>
+
+            <div class="pricing">
+                <p>Total: <strong>S/255</strong> <span class="discount-price"><s>S/300</s></span> <br> <br> <span class="discount">15% dto.</span></p>
+            </div>
+        </div>
+    </section>
+
+    
+    <input type="checkbox" id="buy-modal" class="modal-toggle">
+    
+    
+    <div class="modal">
+        <label for="buy-modal" class="modal-overlay"></label>
+        <div class="modal-content">
+            <label for="buy-modal" class="cancel-button">Cancelar</label>
+            <h2>Detalles de Compra</h2>
+            <form>
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="address">Dirección de Envío:</label>
+                <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+                <h3>Método de Pago:</h3>
+                <div class="payment-options">
+                    <input type="radio" id="tarjeta" name="payment" value="tarjeta" required>
+                    <label for="tarjeta">Tarjeta de Crédito/Débito</label><br>
+
+                    <input type="radio" id="efectivo" name="payment" value="efectivo">
+                    <label for="efectivo">Efectivo en Tienda</label>
+                </div><br>
+
+             
+
+                <input type="submit" value="Confirmar Compra">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>Descubrir</h3>
+                <ul>
+                    <li><a href="#">Monitores</a></li>
+                    <li><a href="#">PC Gamers</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Tarjetas de video</a></li>
+                    <li><a href="#">Refrigeración líquida</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Nuevos Lanzamientos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Cuenta</h3>
+                <ul>
+                    <li><a href="#">Administrar tu cuenta</a></li>
+                    <li><a href="#">Historial de pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Compra con Confianza</h3>
+                <ul>
+                    <li><a href="#">Guías de compras</a></li>
+                    <li><a href="#">Cambios y Devoluciones</a></li>
+                    <li><a href="#">Seguridad y Privacidad</a></li>
+                    <li><a href="#">Seguimiento de despacho</a></li>
+                    <li><a href="#">Política de privacidad de datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Para empresas</h3>
+                <ul>
+                    <li><a href="#">Soluciones corporativas</a></li>
+                    <li><a href="#">Planes de equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Acerca de nosotros</h3>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Canal de denuncias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <p>Atención al cliente: Llama al <strong>+51 98547365</strong></p>
+            <p>Atención al cliente: Fijo <strong> 01 3652566</strong></p>
+            <p>© 2024 ArmaTuPcDeConfianza. Todos los derechos son reservados.</p>
+            <div class="footer-links">
+                <a href="politica.html">Política de privacidad</a> |
+                <a href="#">Aviso legal</a> |
+                <a href="https://www.google.com/maps/place/Mi+PC+Lista+-+Todo+en+Computadoras+y+Laptops/@-12.05336,-77.0388918,14z/data=!4m6!3m5!1s0x9105c9a9a194b201:0x2dbc87a3737118d0!8m2!3d-12.0534295!4d-77.0388842!16s%2Fg%2F11t3h6rhfg?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D">Mapa del sitio</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>© 2024 Desarrollo Web - Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/tupclistaperu" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tupclistaperu/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="formulario.js"></script>
+</body>
+</html>

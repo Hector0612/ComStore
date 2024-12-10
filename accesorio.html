@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios para Computadoras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="logo">
+                    <img src="computer.jpg" alt="Logo Tienda de Accesorios" class="logo-img">
+                </a>
+                <ul class="nav-links">
+                    <li><button onclick="location.href='index.html'" class="catalog-button">Catálogo</button></li>
+                    <li><button onclick="location.href='accesorio.html'" class="accesorio-button">Accesorios</button></li>
+                    <nav>
+                        <button class="contact-button">Contáctenos</button>
+                    </nav>
+        
+                    <div id="popup-form" class="popup hidden">
+                        <div class="popup-content">
+                            <button class="close-popup">&times;</button>
+                            <h2>Contáctanos</h2>
+                            <form id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono:</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje:</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                
+                                    <button type="submit" class="submit-button">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <li><button onclick="location.href='carrito.html'" class="cart-button">Carrito</button></li>
+                </ul>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <script>
+            const navbar = document.querySelector('.navbar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Efecto de contracción de la barra de navegación al desplazarse
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shrink');
+                } else {
+                    navbar.classList.remove('shrink');
+                }
+            });
+
+            // Toggle del menú para pantallas pequeñas
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        </script>
+    </header>
+
+    <!-- Contenedor del formulario emergente -->
+    <div id="popup-form" class="popup hidden">
+        <!-- El contenido del formulario ya está definido arriba -->
+    </div>
+
+        <!-- Contenedor del video-baner -->
+    <header class="hero-container">
+        <video autoplay loop muted class="hero-video">
+            <source src="video_baner.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Bienvenidos a nuestro apartado de accesorios</h1>
+            <p>Todo lo que necesitas para tus computadoras</p>
+        </div>
+    </header>
+    
+
+
+    <section class="products">
+        <div class="product-grid">
+           
+            <div class="product">
+                <img src="https://mesajil.com/wp-content/uploads/2023/02/15571-1.jpg" alt="Estabilizador Forza">
+                <h3>Estabilizador Forza 2200 VA</h3>
+                <p><span class="discount">10% dto.</span> S/ 106</p>
+                <a href="accesorio1.html" class="compare">Comprar</a>
+            </div>
+
+           
+            <div class="product">
+                <img src="https://oechsle.vteximg.com.br/arquivos/ids/3064108-1000-1000/image-04677b2c946a4ddeabd91039eec25188.jpg?v=637492424484700000" alt="Mouse pad Gamer">
+                <h3>Mouse pad Gamer</h3>
+                <p><span class="discount">12% dto.</span> S/ 60</p>
+                <a href="accesorio2.html" class="compare">Comprar</a>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://coolboxpe.vtexassets.com/arquivos/ids/207781/MP-12_3.jpg?v=637832102324900000" alt="Protector de Pantalla Vidrio Templado">
+                <h3>Mouse pad Teraware MP-13</h3>
+                <p><span class="discount">5% dto.</span> S/ 40</p>
+                <a href="accesorio3.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://mesajil.com/wp-content/uploads/2023/07/27777-8.jpg" alt="Mouse Pad Logitech">
+                <h3>Mouse Pad Logitech </h3>
+                <p><span class="discount">15% dto.</span>S/ 70</p>
+                <a href="accesorio4.html" class="compare">Comprar</a>
+            </div>
+
+           
+            <div class="product">
+                <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/2174/PMP00002935038/full_image-1.jpeg" alt="USB Kingston 128G">
+                <h3>USB Kingston 128G</h3>
+                <p><span class="discount">9% dto.</span>S/ 32</p>
+                <a href="accesorio5.html" class="compare">Comprar</a>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://mesajil.com/wp-content/uploads/2023/02/15053.jpg" alt="Estabilizador Forza 3000VA">
+                <h3>Estabilizador Forza 3000VA</h3>
+                <p><span class="discount">10% dto.</span>S/ 150</p>
+                <a href="accesorio6.html" class="compare">Comprar</a>
+            </div>
+            <div class="product">
+                <img src="https://www.intecglobalperu.com/wp-content/uploads/2021/11/Kingston-HyperX-Quadcast-196188049471-01.jpg" alt="Microfono Hyper X">
+                <h3>Microfono Hyper X</h3>
+                <p><span class="discount">5% dto.</span>S/ 550</p>
+                <a href="accesorio7.html" class="compare">Comprar</a>
+            </div>
+
+           
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/615xqCHxnNL._AC_SL1500_.jpg" alt="Microfono Aokeo">
+                <h3>Microfono Aokeo </h3>
+                <p><span class="discount">13% dto.</span>S/ 110</p>
+                <a href="accesorio8.html" class="compare">Comprar</a>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://www.tecnopura.com/wp-content/uploads/cable-vga-1-5-metros-con-filtro-monitor-computador-videobeam-0.jpg" alt="Cable VGA">
+                <h3>Cable VGA</h3>
+                <p><span class="discount">7% dto.</span>S/ 25</p>
+                <a href="accesorio9.html" class="compare">Comprar</a>
+            </div>
+
+
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61NrAZHeuCL._AC_SL1200_.jpg" alt="Kit de micrófono USB para juegos FIFINE">
+                <h3>Kit de micrófono USB para juegos FIFINE </h3>
+                <p><span class="discount">21% dto.</span>S/ 205</p>
+                <a href="accesorio10.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_870011-MLU73844254265_012024-O.webp" alt="Alfombrilla de Ratón de Vidrio">
+                <h3>Alfombrilla de Ratón de Vidrio</h3>
+                <p><span class="discount">17% dto.</span>S/ 560.25</p>
+                <a href="accesorio11.html" class="compare">Comprar</a>
+            </div>
+            
+            <div class="product">
+                <img src="https://www.kobyinversiones.com/wp-content/uploads/2021/12/MICROFONO-TRUST-GXT256-EXXO-1.jpg" alt="Micrófono Gamer Trust GXT 256 EXXO Luz RGB">
+                <h3>Micrófono Gamer Trust GXT 256 EXXO Luz RGB </h3>
+                <p><span class="discount">32% dto.</span>S/ 372</p>
+                <a href="accesorio12.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://mipclista.com/2276-large_default/mouse-gamer-logitech-g203-lightsync.jpg" alt="Mouse gamer Logitech G203 Lightsync">
+                <h3>Mouse gamer Logitech G203 Lightsync </h3>
+                <p><span class="discount">10% dto.</span>S/ 170</p>
+                <a href="accesorio13.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://mipclista.com/6326-large_default/mouse-halion-cartoon-ha-m853-usb.jpg" alt="Mouse Gamer Logitech G502 Hero">
+                <h3>Mouse Gamer Logitech G502 Hero </h3>
+                <p><span class="discount">36% dto.</span>S/ 229.76</p>
+                <a href="accesorio14.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://mipclista.com/7413-large_default/kit-teclado-mouse-gamer-msi-vigor-gk30-rgb-.jpg" alt="Teclado MECANICO ANTRYX MK860L">
+                <h3>Teclado MECANICO ANTRYX MK860L </h3>
+                <p><span class="discount">15% dto.</span>S/ 255</p>
+                <a href="accesorio15.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://mipclista.com/7415-large_default/kit-teclado-mouse-gamer-msi-vigor-gk30-rgb-.jpg" alt="KIT GAMING TECLADO MECANICO MOUSE ANTRYX GC-5600 BLUE SWITCH">
+                <h3>KIT GAMING TECLADO MECANICO MOUSE ANTRYX GC-5600 BLUE SWITCH </h3>
+                <p><span class="discount">25% dto.</span>S/ 375</p>
+                <a href="accesorio16.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://smartbusiness.pe/cdn/shop/files/csa00bkte1312g.jpg?v=1723683654" alt="Case Gamer Teros TE1312 Negro USB 3.0 USB 2.0 Audio Fan ARGB">
+                <h3>Case Gamer Teros TE1312 Negro USB 3.0 USB 2.0 Audio Fan ARGB </h3>
+                <p><span class="discount">20% dto.</span>S/ 480</p>
+                <a href="accesorio17.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://d2afzeh90u15r8.cloudfront.net/myvstore/media/product_gallery/Imagen8_ELVdHFO.jpg" alt="Case Gamer Teros TE1311 WHITE | ARGB | FANX4">
+                <h3>Case Gamer Teros TE1311 WHITE | ARGB | FANX4 </h3>
+                <p><span class="discount">12% dto.</span>S/ 264</p>
+                <a href="accesorio18.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://www.impulso.pe/imagenes/galeria/productos/thumb/7139-impulso-informatico.jpg" alt="Case Gamer Micronics Fanatic Legend FNTC8007 | RGB">
+                <h3>Case Gamer Micronics Fanatic Legend FNTC8007 | RGB </h3>
+                <p><span class="discount">15% dto.</span>S/ 255</p>
+                <a href="accesorio19.html" class="compare">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="https://www.infotec.com.pe/39466-large_default/case-gamer-halion-magic-mirror-500w-vidrio-templado-led-rgb.jpg" alt="Case PC Halion Magic Mirror | Gamer RGB">
+                <h3>Case PC Halion Magic Mirror | Gamer RGB </h3>
+                <p><span class="discount">20% dto.</span>S/ 320</p>
+                <a href="accesorio20.html" class="compare">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>Descubrir</h3>
+                <ul>
+                    <li><a href="#">Monitores</a></li>
+                    <li><a href="#">PC Gamers</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Tarjetas de video</a></li>
+                    <li><a href="#">Refrigeración líquida</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Nuevos Lanzamientos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Cuenta</h3>
+                <ul>
+                    <li><a href="#">Administrar tu cuenta</a></li>
+                    <li><a href="#">Historial de pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Compra con Confianza</h3>
+                <ul>
+                    <li><a href="#">Guías de compras</a></li>
+                    <li><a href="#">Cambios y Devoluciones</a></li>
+                    <li><a href="#">Seguridad y Privacidad</a></li>
+                    <li><a href="#">Seguimiento de despacho</a></li>
+                    <li><a href="#">Política de privacidad de datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Para empresas</h3>
+                <ul>
+                    <li><a href="#">Soluciones corporativas</a></li>
+                    <li><a href="#">Planes de equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Acerca de nosotros</h3>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Canal de denuncias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <p>Número de Contacto:<strong>+51 98547365</strong></p>
+            <p>Atención al cliente Fijo: <strong> 01 3652566</strong></p>
+            <p><strong>Atención al Cliente:</strong> Lunes a Sábado, 9:00 am - 7:00 pm Domingos, 10:00 am - 2:00pm</p>
+            <p>© 2024 ArmaTuPcDeConfianza. Todos los derechos son reservados.</p>
+            <div class="footer-links">
+                <a href="politica.html">Política de privacidad</a> |
+                <a href="#">Aviso legal</a> |
+                <p><strong>Ubícanos:</strong>
+                    <a href="https://www.google.com/maps/place/Mi+PC+Lista+-+Todo+en+Computadoras+y+Laptops/@-12.05343,-77.038884,15z/data=!4m6!3m5!1s0x9105c9a9a194b201:0x2dbc87a3737118d0!8m2!3d-12.0534295!4d-77.0388842!16s%2Fg%2F11t3h6rhfg?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank">
+                        Acisclo Villarán 331 - Interior Sótano 1, Lima 15001
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>© 2024 ArmaTuPcDeConfianza - Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/tupclistaperu" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tupclistaperu/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="formulario.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras para TuTiendaDeCelulares. Revisa tus productos y procede al pago de manera sencilla.">
+    <meta name="keywords" content="carrito de compras, tienda de celulares, accesorios, pago, compra online">
+    <meta name="author" content="TuTiendaDeCelulares">
+    
+    <title>Carrito de Compras | ArmaTuPcDeConfianza</title>
+    
+    <link rel="stylesheet" href="carrito.css"> <!-- Archivo CSS externo -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon para la página -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con navegación principal -->
+    <header>
+        <h1>Tu Carrito de Compras</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="accesorio.html">Accesorios</a></li>
+                <nav>
+                    <button class="contact-button">Contáctenos</button>
+                </nav>
+    
+                <div id="popup-form" class="popup hidden">
+                    <div class="popup-content">
+                        <button class="close-popup">&times;</button>
+                        <h2>Contáctanos</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje:</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                                <button type="submit" class="submit-button">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor del formulario emergente -->
+    <div id="popup-form" class="popup hidden">
+        <!-- El contenido del formulario ya está definido arriba -->
+    </div>
+
+    <!-- Sección principal del carrito -->
+    <main>
+        <section class="cart">
+            <h2>Productos en tu Carrito</h2>
+            
+            <div id="lista-carrito" aria-live="polite">
+                <!-- Productos añadidos dinámicamente aquí -->
+            </div>
+
+            <aside class="cart-summary">
+                <h3>Resumen del Carrito</h3>
+                <p>Subtotal: S/ <span class="subtotal">0</span></p>
+                <p>Total: S/ <span id="total">0</span></p>
+                <button class="checkout-btn">
+                    <label for="payment-modal" style="cursor: pointer;">Proceder al Pago</label>
+                </button>
+                
+                <button class="empty-cart-btn">Vaciar Carrito</button>
+            </aside>
+        </section>
+    </main>
+
+    <!-- Modal para proceder al pago -->
+<input type="checkbox" id="payment-modal" class="modal-toggle">
+
+<div class="modal">
+    <label for="payment-modal" class="modal-overlay"></label>
+    <div class="modal-content">
+        <label for="payment-modal" class="cancel-button">Cancelar</label>
+        <h2>Detalles de Compra</h2>
+        <form>
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="address">Dirección de Envío:</label>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+            <h3>Método de Pago:</h3>
+            <div class="payment-options">
+                <input type="radio" id="tarjeta" name="payment" value="tarjeta" required>
+                <label for="tarjeta">Tarjeta de Crédito/Débito</label><br>
+
+                <input type="radio" id="efectivo" name="payment" value="efectivo">
+                <label for="efectivo">Efectivo en Tienda</label>
+            </div><br>
+
+            <input type="submit" value="Confirmar Compra">
+        </form>
+    </div>
+</div>
+
+
+    <!-- Footer con información legal -->
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>Descubrir</h3>
+                <ul>
+                    <li><a href="#">Monitores</a></li>
+                    <li><a href="#">PC Gamers</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Tarjetas de video</a></li>
+                    <li><a href="#">Refrigeración líquida</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Nuevos Lanzamientos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Cuenta</h3>
+                <ul>
+                    <li><a href="#">Administrar tu cuenta</a></li>
+                    <li><a href="#">Historial de pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Compra con Confianza</h3>
+                <ul>
+                    <li><a href="#">Guías de compras</a></li>
+                    <li><a href="#">Cambios y Devoluciones</a></li>
+                    <li><a href="#">Seguridad y Privacidad</a></li>
+                    <li><a href="#">Seguimiento de despacho</a></li>
+                    <li><a href="#">Política de privacidad de datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Para empresas</h3>
+                <ul>
+                    <li><a href="#">Soluciones corporativas</a></li>
+                    <li><a href="#">Planes de equipo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Acerca de nosotros</h3>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Canal de denuncias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <p>Atención al cliente: Llama al <strong>+51 98547365</strong></p>
+            <p>Atención al cliente: Fijo <strong> 01 3652566</strong></p>
+            <p>© 2024 ArmaTuPcDeConfianza. Todos los derechos son reservados.</p>
+            <div class="footer-links">
+                <a href="politica.html">Política de privacidad</a> |
+                <a href="#">Aviso legal</a> |
+                <a href="https://www.google.com/maps/place/Mi+PC+Lista+-+Todo+en+Computadoras+y+Laptops/@-12.05336,-77.0388918,14z/data=!4m6!3m5!1s0x9105c9a9a194b201:0x2dbc87a3737118d0!8m2!3d-12.0534295!4d-77.0388842!16s%2Fg%2F11t3h6rhfg?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D">Mapa del sitio</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>© 2024 Desarrollo Web - Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://wa.me/1234567890" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/tupclistaperu" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tupclistaperu/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript al final para mejorar el rendimiento -->
+    <script src="script.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
